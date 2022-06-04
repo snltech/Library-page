@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="topSection">
+        <button class="newBook">New Book</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="modal" id="modal">
+        <div class="modalHeader">
+            <h2>Book Info</h2>
+            <input type="button" value="x">
+        </div>
+        <div class="bookForm">
+            <form>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="Title">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" placeholder="Author">
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="pages" placeholder="Pages">
+                <label for="isRead">Status (Read/Not Read)</label>
+                <input type="checkbox" name="status" id="isRead">
+                <div class="submitBtn">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
