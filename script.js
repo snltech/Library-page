@@ -35,5 +35,10 @@ addBookToLibrary(theHobbit);
 addBookToLibrary(fortyEightLaws);
 addBooksToTable();
 
-let newBookBtn = document.querySelectorAll('.newBook');
-newBookBtn.addEventListener('click', e => alert('check'));
+const newbookbtn = document.querySelector(".newBook");
+newbookbtn.addEventListener('click', e => alert("check click"));
+
+// let btns = document.querySelectorAll('.topSection button');
+// btns.forEach( button => {
+//     button.addEventListener('click', e => )
+// })
