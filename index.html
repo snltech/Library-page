@@ -11,7 +11,7 @@
 <body>
     <div class="topSection">
         <h1>My Library</h1>
-        <button class="newBook">New Book</button>
+        <button class="newBook" data-modal-target="#modal">New Book</button>
     </div>
     <div class="tableSection">
         <table>
@@ -30,7 +30,7 @@
     <div class="modal" id="modal">
         <div class="modalHeader">
             <h2>Book Info</h2>
-            <input type="button" value="&times;">
+            <input type="button" value="&times;" data-modal-close="#modal">
         </div>
         <div class="bookForm">
             <form>
@@ -48,6 +48,6 @@
             </form>
         </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>

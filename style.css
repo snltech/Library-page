@@ -58,7 +58,7 @@ td {
 
 .modal {
     position: fixed;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
     top: 50%;
     left: 50%;
     border-radius: 5px;
@@ -67,6 +67,7 @@ td {
     width: 350px;
     z-index: 10;
     background-color: white;
+    transition: 250ms ease-in-out;
 }
 
 .modalHeader {
@@ -109,8 +110,8 @@ td {
     justify-content: center;
 }
 
-.active {
-    transform: scale(1);
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .overlay {
@@ -123,4 +124,9 @@ td {
     /* transform: scale(0); */
     opacity: 0;
     pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }

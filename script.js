@@ -35,10 +35,39 @@ addBookToLibrary(theHobbit);
 addBookToLibrary(fortyEightLaws);
 addBooksToTable();
 
-const newbookbtn = document.querySelector(".newBook");
-newbookbtn.addEventListener('click', e => alert("check click"));
+const openModalBtns = document.querySelectorAll("[data-modal-target]");
+const closeModalBtns = document.querySelectorAll("[data-modal-close]");
+const overlay = document.getElementById('overlay');
 
-// let btns = document.querySelectorAll('.topSection button');
-// btns.forEach( button => {
-//     button.addEventListener('click', e => )
-// })
+
+openModalBtns.forEach( button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);    
+    })
+})
+
+closeModalBtns.forEach( button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalClose);
+        closeModal(modal);    
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => modal.classList.remove('active'));
+    overlay.classList.remove('active');
+})
+
+function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closeModal(modal){
+    if (modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
