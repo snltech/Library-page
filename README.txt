@@ -34,4 +34,4 @@ Tricks learned:
 
 3)  Buttons made darker when clicked with :active, note that :focus behaves differenty, you'll have to click away from the element.
 
-4)  
+4)  Learned about the closest property, should also help with the creation of a button that removes the closest parent row.
