@@ -42,9 +42,14 @@
                 <label for="pages">Pages</label>
                 <input type="number" name="pages" id="pages" placeholder="Pages">
                 <label for="isRead">Status (Read/Not Read)</label>
-                <input type="checkbox" name="status" id="isRead">
+                <div class="checkboxes">
+                    <p>Yes</p>
+                    <input type="checkbox" name="status" id="isRead" checked value="Read">
+                    <p>No</p>
+                    <input type="checkbox" name="status" id="isRead" value="Not Read">
+                </div>
                 <div class="submitBtn">
-                    <button type="submit">Submit</button>
+                    <input type="button" id="submitBtn" value="Submit">
                 </div>
             </form>
         </div>

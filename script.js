@@ -38,12 +38,12 @@ function addBooksToTable(){
 }
 
 //  Books
-const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'not read yet');
-const fortyEightLaws = new Book('48 Laws of Power', 'Robert Greene', "300+", 'read half');
+// const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'not read yet');
+// const fortyEightLaws = new Book('48 Laws of Power', 'Robert Greene', "300+", 'read half');
 
-addBookToLibrary(theHobbit);
-addBookToLibrary(fortyEightLaws);
-addBooksToTable();
+// addBookToLibrary(theHobbit);
+// addBookToLibrary(fortyEightLaws);
+// addBooksToTable();
 
 // Buttons for overlay
 const openModalBtns = document.querySelectorAll("[data-modal-target]");
@@ -108,3 +108,22 @@ function addxbtns()
 }
 
 addxbtns();
+
+
+// SUBMIT BUTTON FUNCTIONALITY TO ADD BOOKS
+const submitBtn = document.querySelector('#submitBtn');
+
+submitBtn.addEventListener('click', 
+() => {
+    const newbook = new Book(
+    document.getElementById('title').value,
+    document.getElementById('author').value,
+    document.getElementById('pages').value,
+    document.querySelector('#isRead:checked').value);
+    console.log(newbook);
+    addBookToLibrary(newbook);
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => row.remove());
+    addBooksToTable();
+    addxbtns();
+});
